@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="actionButton" destination="8R1-0k-L8g" id="nha-0o-DnQ"/>
                 <outlet property="iconImageView" destination="VOX-Ls-BaH" id="hsF-KL-PZR"/>
+                <outlet property="iconWidthConstrain" destination="dop-Cf-bcm" id="9o3-7H-Wvt"/>
                 <outlet property="messageBoard" destination="0N5-gp-EFk" id="fG0-jV-ib8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
