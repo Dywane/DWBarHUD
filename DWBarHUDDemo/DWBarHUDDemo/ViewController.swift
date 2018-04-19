@@ -21,5 +21,19 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func showHUD(_ sender: Any) {
+        DWBarHUD.showHUD(message: "this is a message, you need to read it")
+    }
+    
+    @IBAction func showSuccessHUD(_ sender: Any) {
+        DWBarHUD.showHUD(message: "this is a success message", type: .success)
+    }
+    @IBAction func showFailHUD(_ sender: Any) {
+        DWBarHUD.showHUD(message: "this is a fail message", type: .fail)
+    }
+    @IBAction func showWarningHUD(_ sender: Any) {
+        DWBarHUD.showHUD(message: "this is a warning message", type: .warning)
+    }
+    
 }
 
