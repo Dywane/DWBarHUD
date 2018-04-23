@@ -18,10 +18,12 @@ enum BarHUDType {
 class BarHUDViewController: UIViewController {
 
     //MARK: - Properties
+    @IBOutlet weak var HUDView: UIView!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var messageBoard: UILabel!
-    @IBOutlet weak var actionButton: UIButton!
+    
     @IBOutlet weak var iconWidthConstrain: NSLayoutConstraint!
+    @IBOutlet weak var HUDHeightConstrain: NSLayoutConstraint!
     
     private var displayDuration: TimeInterval!
     private var HUDConfig: HUDConfig!
@@ -41,16 +43,12 @@ class BarHUDViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configViews()
+        view.isUserInteractionEnabled = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         present()
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        handleDisplayPosition()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,7 +64,7 @@ extension BarHUDViewController {
         UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseInOut], animations: {
             self.view.layoutIfNeeded()
         }) { _ in
-            if self.actionButton.isHidden {
+            if self.displayDuration > 0 {
                 let time = DispatchTime.now() + self.displayDuration
                 DispatchQueue.main.asyncAfter(deadline: time) {
                     self.dismiss()
@@ -91,11 +89,8 @@ extension BarHUDViewController {
         messageBoard.textColor = HUDConfig.barMessageFontColor
         messageBoard.text = message
         iconImageView.isHidden = !HUDConfig.showIcon
-        actionButton.isHidden = !HUDConfig.showActionButton
-        actionButton.setTitle(HUDConfig.barActionButtonTitle, for: .normal)
-        actionButton.setTitleColor(HUDConfig.barActionButtonTitleColor, for: .normal)
-        actionButton.titleLabel?.font = HUDConfig.barActionButtonFont
         displayDuration = HUDConfig.displayDuration
+        HUDHeightConstrain.constant = HUDConfig.barHeight
         
         // type define setup
         switch type {
@@ -105,37 +100,33 @@ extension BarHUDViewController {
             } else {
                 iconImageView.isHidden = true
             }
-            view.backgroundColor = HUDConfig.barSuccessColor
+            HUDView.backgroundColor = HUDConfig.barSuccessColor
         case .fail:
             if let icon = HUDConfig.barFailIcon {
                 iconImageView.image = icon
             } else {
                 iconImageView.isHidden = true
             }
-            view.backgroundColor = HUDConfig.barFailColor
+            HUDView.backgroundColor = HUDConfig.barFailColor
         case .warning:
             if let icon = HUDConfig.barWarningIcon {
                 iconImageView.image = icon
             } else {
                 iconImageView.isHidden = true
             }
-            view.backgroundColor = HUDConfig.barWarningColor
+            HUDView.backgroundColor = HUDConfig.barWarningColor
         default:
             if let icon = HUDConfig.barDefaultIcon {
                 iconImageView.image = icon
             } else {
                 iconImageView.isHidden = true
             }
-            view.backgroundColor = HUDConfig.barDefaultColor
+            HUDView.backgroundColor = HUDConfig.barDefaultColor
         }
         if iconImageView.isHidden {
             iconWidthConstrain.constant = 0
         } else {
             iconWidthConstrain.constant = 50
         }
-    }
-    
-    private func handleDisplayPosition() {
-        view.frame.size.height = HUDConfig.barHeight
     }
 }

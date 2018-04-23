@@ -16,7 +16,6 @@
 		5B4E767C20886AD100B006E5 /* DWBarHUDDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E767B20886AD100B006E5 /* DWBarHUDDemoUITests.swift */; };
 		5B4E769320888A7500B006E5 /* BarHUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E769120888A7500B006E5 /* BarHUDViewController.swift */; };
 		5B4E769420888A7500B006E5 /* BarHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4E769220888A7500B006E5 /* BarHUDViewController.xib */; };
-		5B4E7696208896FA00B006E5 /* HUDConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E7695208896FA00B006E5 /* HUDConfigProtocol.swift */; };
 		5B4E76982088974500B006E5 /* DWBarHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E76972088974500B006E5 /* DWBarHUD.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		5B4E767D20886AD100B006E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B4E769120888A7500B006E5 /* BarHUDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarHUDViewController.swift; sourceTree = "<group>"; };
 		5B4E769220888A7500B006E5 /* BarHUDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarHUDViewController.xib; sourceTree = "<group>"; };
-		5B4E7695208896FA00B006E5 /* HUDConfigProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDConfigProtocol.swift; sourceTree = "<group>"; };
 		5B4E76972088974500B006E5 /* DWBarHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWBarHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				5B4E76972088974500B006E5 /* DWBarHUD.swift */,
-				5B4E7695208896FA00B006E5 /* HUDConfigProtocol.swift */,
 				5B4E769120888A7500B006E5 /* BarHUDViewController.swift */,
 				5B4E769220888A7500B006E5 /* BarHUDViewController.xib */,
 			);
@@ -279,7 +276,6 @@
 			files = (
 				5B4E765E20886AD000B006E5 /* ViewController.swift in Sources */,
 				5B4E76982088974500B006E5 /* DWBarHUD.swift in Sources */,
-				5B4E7696208896FA00B006E5 /* HUDConfigProtocol.swift in Sources */,
 				5B4E765C20886AD000B006E5 /* AppDelegate.swift in Sources */,
 				5B4E769320888A7500B006E5 /* BarHUDViewController.swift in Sources */,
 			);

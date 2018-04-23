@@ -41,7 +41,7 @@ final class DWBarHUD {
     }
 }
 
-public struct HUDConfig: HUDConfigProtocol {
+public struct HUDConfig {
     
     // MARK: - Properties
     // MARK: - DWBarProtocol
@@ -54,7 +54,7 @@ public struct HUDConfig: HUDConfigProtocol {
     /// 普通状态Icon
     var barDefaultIcon: UIImage?
     /// HUD高度
-    var barHeight: CGFloat = 50
+    var barHeight: CGFloat = 70
     /// 成功状态背景颜色
     var barSuccessColor: UIColor = .green
     /// 失败状态背景颜色
@@ -80,7 +80,7 @@ public struct HUDConfig: HUDConfigProtocol {
     /// HUD显示时间
     var displayDuration: TimeInterval = 2.0
     
-    func showHUD(type: BarHUDType = .defaultType, message: String) {
+    fileprivate func showHUD(type: BarHUDType = .defaultType, message: String) {
         let vc = BarHUDViewController()
         vc.setup(HUDSetter: self, type: type, message: message)
         DWBarHUD.display(HUD: vc)
