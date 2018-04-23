@@ -79,6 +79,8 @@ public struct HUDConfig {
     var showIcon: Bool = false
     /// HUD显示时间
     var displayDuration: TimeInterval = 2.0
+    /// HUD显示动画时长
+    var animationDuration: TimeInterval = 0.3
     
     fileprivate func showHUD(type: BarHUDType = .defaultType, message: String) {
         let vc = BarHUDViewController()

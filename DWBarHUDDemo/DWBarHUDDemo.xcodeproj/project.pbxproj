@@ -17,6 +17,7 @@
 		5B4E769320888A7500B006E5 /* BarHUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E769120888A7500B006E5 /* BarHUDViewController.swift */; };
 		5B4E769420888A7500B006E5 /* BarHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4E769220888A7500B006E5 /* BarHUDViewController.xib */; };
 		5B4E76982088974500B006E5 /* DWBarHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E76972088974500B006E5 /* DWBarHUD.swift */; };
+		5BF577B3208DF942005D5FD9 /* BarAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF577B2208DF942005D5FD9 /* BarAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5B4E769120888A7500B006E5 /* BarHUDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarHUDViewController.swift; sourceTree = "<group>"; };
 		5B4E769220888A7500B006E5 /* BarHUDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarHUDViewController.xib; sourceTree = "<group>"; };
 		5B4E76972088974500B006E5 /* DWBarHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWBarHUD.swift; sourceTree = "<group>"; };
+		5BF577B2208DF942005D5FD9 /* BarAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				5B4E76972088974500B006E5 /* DWBarHUD.swift */,
 				5B4E769120888A7500B006E5 /* BarHUDViewController.swift */,
+				5BF577B2208DF942005D5FD9 /* BarAnimation.swift */,
 				5B4E769220888A7500B006E5 /* BarHUDViewController.xib */,
 			);
 			path = DWBarHUD;
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF577B3208DF942005D5FD9 /* BarAnimation.swift in Sources */,
 				5B4E765E20886AD000B006E5 /* ViewController.swift in Sources */,
 				5B4E76982088974500B006E5 /* DWBarHUD.swift in Sources */,
 				5B4E765C20886AD000B006E5 /* AppDelegate.swift in Sources */,

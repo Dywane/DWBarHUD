@@ -25,8 +25,7 @@ class BarHUDViewController: UIViewController {
     @IBOutlet weak var iconWidthConstrain: NSLayoutConstraint!
     @IBOutlet weak var HUDHeightConstrain: NSLayoutConstraint!
     
-    private var displayDuration: TimeInterval!
-    private var HUDConfig: HUDConfig!
+    var HUDConfig: HUDConfig!
     private var type: BarHUDType = .defaultType
     private var message: String!
     
@@ -61,14 +60,14 @@ class BarHUDViewController: UIViewController {
 extension BarHUDViewController {
     // display
     private func present() {
-        UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseInOut], animations: {
-            self.view.layoutIfNeeded()
-        }) { _ in
-            if self.displayDuration > 0 {
-                let time = DispatchTime.now() + self.displayDuration
+        defaultAppear { (_) in
+            if self.HUDConfig.displayDuration > 0 {
+                let time = DispatchTime.now() + self.HUDConfig.displayDuration
                 DispatchQueue.main.asyncAfter(deadline: time) {
                     self.dismiss()
                 }
+            } else {
+                fatalError("display duration must above zero")
             }
         }
     }
@@ -89,7 +88,6 @@ extension BarHUDViewController {
         messageBoard.textColor = HUDConfig.barMessageFontColor
         messageBoard.text = message
         iconImageView.isHidden = !HUDConfig.showIcon
-        displayDuration = HUDConfig.displayDuration
         HUDHeightConstrain.constant = HUDConfig.barHeight
         
         // type define setup
