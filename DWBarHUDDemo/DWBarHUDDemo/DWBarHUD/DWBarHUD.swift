@@ -21,7 +21,7 @@ final class DWBarHUD {
     }
     
     /// 配置类
-    open var config: HUDConfig = HUDConfig()
+    public var config: HUDConfig = HUDConfig()
     
     //MARK: - Public Method
     class func showHUD(message: String, type: BarHUDType = .defaultType) {
