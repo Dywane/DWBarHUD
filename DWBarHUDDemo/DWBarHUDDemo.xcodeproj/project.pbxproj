@@ -19,6 +19,8 @@
 		5B78F3192093119800B7E863 /* BarHUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E769120888A7500B006E5 /* BarHUDViewController.swift */; };
 		5B78F31A2093119800B7E863 /* BarAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF577B2208DF942005D5FD9 /* BarAnimation.swift */; };
 		5B78F31B2093119800B7E863 /* DWBarHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E76972088974500B006E5 /* DWBarHUD.swift */; };
+		5B78F31D2093143700B7E863 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B78F31C2093143700B7E863 /* Icons.xcassets */; };
+		5B78F31F2093171800B7E863 /* DWHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B78F31E2093171800B7E863 /* DWHUDAssets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		5B78F2FB2093116300B7E863 /* DWBarHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DWBarHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B78F2FD2093116300B7E863 /* DWBarHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBarHUD.h; sourceTree = "<group>"; };
 		5B78F2FE2093116300B7E863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B78F31C2093143700B7E863 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		5B78F31E2093171800B7E863 /* DWHUDAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWHUDAssets.swift; sourceTree = "<group>"; };
 		5BF577B2208DF942005D5FD9 /* BarAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +123,9 @@
 				5B4E76972088974500B006E5 /* DWBarHUD.swift */,
 				5B4E769120888A7500B006E5 /* BarHUDViewController.swift */,
 				5BF577B2208DF942005D5FD9 /* BarAnimation.swift */,
+				5B78F31E2093171800B7E863 /* DWHUDAssets.swift */,
 				5B4E769220888A7500B006E5 /* BarHUDViewController.xib */,
+				5B78F31C2093143700B7E863 /* Icons.xcassets */,
 				5B78F2FE2093116300B7E863 /* Info.plist */,
 			);
 			path = DWBarHUD;
@@ -229,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B78F31D2093143700B7E863 /* Icons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +258,7 @@
 				5B78F31A2093119800B7E863 /* BarAnimation.swift in Sources */,
 				5B78F3192093119800B7E863 /* BarHUDViewController.swift in Sources */,
 				5B78F31B2093119800B7E863 /* DWBarHUD.swift in Sources */,
+				5B78F31F2093171800B7E863 /* DWHUDAssets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,19 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vd5-xH-cPd">
-                                <rect key="frame" x="133" y="288" width="69" height="30"/>
+                                <rect key="frame" x="134" y="498" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="showHUD"/>
                                 <connections>
                                     <action selector="showHUD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ll-bs-u5R"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPY-Cm-xt0">
-                                <rect key="frame" x="105" y="336" width="127" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="showSuccessHUD"/>
-                                <connections>
-                                    <action selector="showSuccessHUD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X1g-lV-8Cz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9c-gY-iaG">
@@ -48,6 +40,14 @@
                                 <state key="normal" title="showWarningHUD"/>
                                 <connections>
                                     <action selector="showWarningHUD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RaJ-5k-9OU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPY-Cm-xt0">
+                                <rect key="frame" x="105" y="354" width="127" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="showSuccessHUD"/>
+                                <connections>
+                                    <action selector="showSuccessHUD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X1g-lV-8Cz"/>
                                 </connections>
                             </button>
                         </subviews>

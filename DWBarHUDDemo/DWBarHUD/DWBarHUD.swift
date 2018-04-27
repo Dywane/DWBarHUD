@@ -52,25 +52,25 @@ public struct HUDConfig {
     // MARK: - Properties
     // MARK: - DWBarProtocol
     /// 成功状态Icon
-    var barSuccessIcon: UIImage?
+    var barSuccessIcon: UIImage? = DWHUDAssets.successIcon
     /// 警告状态Icon
-    var barWarningIcon: UIImage?
+    var barWarningIcon: UIImage? = DWHUDAssets.warningIcon
     /// 失败状态Icon
-    var barFailIcon: UIImage?
+    var barFailIcon: UIImage? = DWHUDAssets.failIcon
     /// 普通状态Icon
-    var barDefaultIcon: UIImage?
+    var barDefaultIcon: UIImage? = DWHUDAssets.defaultIcon
     /// HUD高度
     var barHeight: CGFloat = 70
     /// 成功状态背景颜色
-    var barSuccessColor: UIColor = .green
+    var barSuccessColor: UIColor = UIColor(red: 65/255.0, green: 190/255.0, blue: 152/255.0, alpha: 1)
     /// 失败状态背景颜色
-    var barFailColor: UIColor = .red
+    var barFailColor: UIColor = UIColor(red: 253/255.0, green: 141/255.0, blue: 163/255.0, alpha: 1)
     /// 警告状态背景颜色
-    var barWarningColor: UIColor = .yellow
+    var barWarningColor: UIColor = UIColor(red: 255/255.0, green: 204/255.0, blue: 30/255.0, alpha: 1)
     /// 普通状态背景颜色
     var barDefaultColor: UIColor = .lightGray
     /// 提示信息字体
-    var barMessageFont: UIFont = UIFont.systemFont(ofSize: 14)
+    var barMessageFont: UIFont = UIFont.systemFont(ofSize: 15, weight: .semibold)
     /// 提示信息字体颜色
     var barMessageFontColor: UIColor = .white
     /// 按钮标题
@@ -79,10 +79,8 @@ public struct HUDConfig {
     var barActionButtonTitleColor: UIColor = .white
     /// 按钮标题字体
     var barActionButtonFont: UIFont = UIFont.systemFont(ofSize: 14)
-    /// 是否显示按钮
-    var showActionButton: Bool = false
     /// 是否显示icon
-    var showIcon: Bool = false
+    var showIcon: Bool = true
     /// HUD显示时间
     var displayDuration: TimeInterval = 2.0
     /// HUD显示动画时长
