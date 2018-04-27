@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DWBarHUD
 
 class ViewController: UIViewController {
 

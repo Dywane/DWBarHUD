@@ -14,7 +14,7 @@ enum DWBarAnimationType {
     case fade
 }
 
-final class DWBarHUD {
+public final class DWBarHUD {
     
     /// 单例模式用于配制
     fileprivate struct Constants {
@@ -30,7 +30,7 @@ final class DWBarHUD {
     public var config: HUDConfig = HUDConfig()
     
     //MARK: - Public Method
-    class func showHUD(message: String, type: BarHUDType = .default) {
+    public class func showHUD(message: String, type: BarHUDType = .default) {
         sharedHUD.config.showHUD(type: type, message: message)
     }
     
@@ -88,7 +88,7 @@ public struct HUDConfig {
     /// HUD显示动画时长
     var animationDuration: TimeInterval = 0.3
     /// HUD显示动画类型
-    var animationType: DWBarAnimationType = .spring
+    var animationType: DWBarAnimationType = .default
     
     fileprivate func showHUD(type: BarHUDType = .default, message: String) {
         let vc = BarHUDViewController()

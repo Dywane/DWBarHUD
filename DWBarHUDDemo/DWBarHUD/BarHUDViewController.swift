@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum BarHUDType {
+public enum BarHUDType {
     case success
     case fail
     case warning
