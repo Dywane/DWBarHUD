@@ -86,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				5B4E765A20886AD000B006E5 /* DWBarHUDDemo */,
+				5B4E768A20886B1800B006E5 /* DWBarHUD */,
 				5B4E766F20886AD100B006E5 /* DWBarHUDDemoTests */,
 				5B4E767A20886AD100B006E5 /* DWBarHUDDemoUITests */,
 				5B4E765920886AD000B006E5 /* Products */,
@@ -105,7 +106,6 @@
 		5B4E765A20886AD000B006E5 /* DWBarHUDDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5B4E768A20886B1800B006E5 /* DWBarHUD */,
 				5B4E765B20886AD000B006E5 /* AppDelegate.swift */,
 				5B4E765D20886AD000B006E5 /* ViewController.swift */,
 				5B4E765F20886AD000B006E5 /* Main.storyboard */,

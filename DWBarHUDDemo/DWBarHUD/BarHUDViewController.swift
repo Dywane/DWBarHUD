@@ -12,7 +12,7 @@ enum BarHUDType {
     case success
     case fail
     case warning
-    case defaultType
+    case `default`
 }
 
 class BarHUDViewController: UIViewController {
@@ -26,13 +26,13 @@ class BarHUDViewController: UIViewController {
     @IBOutlet weak var HUDHeightConstrain: NSLayoutConstraint!
     
     var HUDConfig: HUDConfig!
-    private var type: BarHUDType = .defaultType
+    private var type: BarHUDType = .default
     private var message: String!
     
     //MARK; - Public methods
     
     /// 使用该方法基于DWBarHUD的子类对view进行配置
-    func setup(HUDSetter: HUDConfig, type: BarHUDType = .defaultType, message: String) {
+    func setup(HUDSetter: HUDConfig, type: BarHUDType = .default, message: String) {
         HUDConfig = HUDSetter
         self.type = type
         self.message = message
@@ -60,7 +60,8 @@ class BarHUDViewController: UIViewController {
 extension BarHUDViewController {
     // display
     private func present() {
-        defaultAppear { (_) in
+        
+        func dismissInTime() {
             if self.HUDConfig.displayDuration > 0 {
                 let time = DispatchTime.now() + self.HUDConfig.displayDuration
                 DispatchQueue.main.asyncAfter(deadline: time) {
@@ -70,14 +71,40 @@ extension BarHUDViewController {
                 fatalError("display duration must above zero")
             }
         }
+        
+        switch HUDConfig.animationType {
+        case .spring:
+            springAppear { (_) in
+                dismissInTime()
+            }
+        case .fade:
+            fadeAppear { (_) in
+                dismissInTime()
+            }
+        default:
+            defaultAppear { (_) in
+                dismissInTime()
+            }
+        }
     }
     
     private func dismiss() {
-        UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseInOut], animations: {
-            self.view.layoutIfNeeded()
-        }) { _ in
-            self.view.removeFromSuperview()
-            self.removeFromParentViewController()
+        switch HUDConfig.animationType {
+        case .spring:
+            springDisappear { (_) in
+                self.view.removeFromSuperview()
+                self.removeFromParentViewController()
+            }
+        case .fade:
+            fadeDisappear { (_) in
+                self.view.removeFromSuperview()
+                self.removeFromParentViewController()
+            }
+        default:
+            defaultDisappear { (_) in
+                self.view.removeFromSuperview()
+                self.removeFromParentViewController()
+            }
         }
     }
     

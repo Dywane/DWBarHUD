@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum DWBarAnimationType {
+    case `default`
+    case spring
+    case fade
+}
+
 final class DWBarHUD {
     
     /// 单例模式用于配制
@@ -24,7 +30,7 @@ final class DWBarHUD {
     public var config: HUDConfig = HUDConfig()
     
     //MARK: - Public Method
-    class func showHUD(message: String, type: BarHUDType = .defaultType) {
+    class func showHUD(message: String, type: BarHUDType = .default) {
         sharedHUD.config.showHUD(type: type, message: message)
     }
     
@@ -81,8 +87,10 @@ public struct HUDConfig {
     var displayDuration: TimeInterval = 2.0
     /// HUD显示动画时长
     var animationDuration: TimeInterval = 0.3
+    /// HUD显示动画类型
+    var animationType: DWBarAnimationType = .spring
     
-    fileprivate func showHUD(type: BarHUDType = .defaultType, message: String) {
+    fileprivate func showHUD(type: BarHUDType = .default, message: String) {
         let vc = BarHUDViewController()
         vc.setup(HUDSetter: self, type: type, message: message)
         DWBarHUD.display(HUD: vc)
