@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum DWBarAnimationType {
+public enum DWBarAnimationType {
     case `default`
     case spring
     case fade
@@ -52,41 +52,35 @@ public struct HUDConfig {
     // MARK: - Properties
     // MARK: - DWBarProtocol
     /// 成功状态Icon
-    var barSuccessIcon: UIImage? = DWHUDAssets.successIcon
+    public var barSuccessIcon: UIImage? = DWHUDAssets.successIcon
     /// 警告状态Icon
-    var barWarningIcon: UIImage? = DWHUDAssets.warningIcon
+    public var barWarningIcon: UIImage? = DWHUDAssets.warningIcon
     /// 失败状态Icon
-    var barFailIcon: UIImage? = DWHUDAssets.failIcon
+    public var barFailedIcon: UIImage? = DWHUDAssets.failIcon
     /// 普通状态Icon
-    var barDefaultIcon: UIImage? = DWHUDAssets.defaultIcon
+    public var barDefaultIcon: UIImage? = DWHUDAssets.defaultIcon
     /// HUD高度
-    var barHeight: CGFloat = 70
+    public var barHeight: CGFloat = 70
     /// 成功状态背景颜色
-    var barSuccessColor: UIColor = UIColor(red: 65/255.0, green: 190/255.0, blue: 152/255.0, alpha: 1)
+    public var barSuccessColor: UIColor = UIColor(red: 65/255.0, green: 190/255.0, blue: 152/255.0, alpha: 1)
     /// 失败状态背景颜色
-    var barFailColor: UIColor = UIColor(red: 253/255.0, green: 141/255.0, blue: 163/255.0, alpha: 1)
+    public var barFailedColor: UIColor = UIColor(red: 253/255.0, green: 141/255.0, blue: 163/255.0, alpha: 1)
     /// 警告状态背景颜色
-    var barWarningColor: UIColor = UIColor(red: 255/255.0, green: 204/255.0, blue: 30/255.0, alpha: 1)
+    public var barWarningColor: UIColor = UIColor(red: 255/255.0, green: 204/255.0, blue: 30/255.0, alpha: 1)
     /// 普通状态背景颜色
-    var barDefaultColor: UIColor = .lightGray
+    public var barDefaultColor: UIColor = .lightGray
     /// 提示信息字体
-    var barMessageFont: UIFont = UIFont.systemFont(ofSize: 15, weight: .semibold)
+    public var barMessageFont: UIFont = UIFont.systemFont(ofSize: 15, weight: .semibold)
     /// 提示信息字体颜色
-    var barMessageFontColor: UIColor = .white
-    /// 按钮标题
-    var barActionButtonTitle: String? = nil
-    /// 按钮标题颜色
-    var barActionButtonTitleColor: UIColor = .white
-    /// 按钮标题字体
-    var barActionButtonFont: UIFont = UIFont.systemFont(ofSize: 14)
+    public var barMessageFontColor: UIColor = .white
     /// 是否显示icon
-    var showIcon: Bool = true
+    public var showIcon: Bool = true
     /// HUD显示时间
-    var displayDuration: TimeInterval = 2.0
+    public var displayDuration: TimeInterval = 2.0
     /// HUD显示动画时长
-    var animationDuration: TimeInterval = 0.3
+    public var animationDuration: TimeInterval = 0.3
     /// HUD显示动画类型
-    var animationType: DWBarAnimationType = .default
+    public var animationType: DWBarAnimationType = .default
     
     fileprivate func showHUD(type: BarHUDType = .default, message: String) {
         let vc = BarHUDViewController()

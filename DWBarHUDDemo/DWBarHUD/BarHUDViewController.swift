@@ -127,12 +127,12 @@ extension BarHUDViewController {
             }
             HUDView.backgroundColor = HUDConfig.barSuccessColor
         case .fail:
-            if let icon = HUDConfig.barFailIcon {
+            if let icon = HUDConfig.barFailedIcon {
                 iconImageView.image = icon
             } else {
                 iconImageView.isHidden = true
             }
-            HUDView.backgroundColor = HUDConfig.barFailColor
+            HUDView.backgroundColor = HUDConfig.barFailedColor
         case .warning:
             if let icon = HUDConfig.barWarningIcon {
                 iconImageView.image = icon
