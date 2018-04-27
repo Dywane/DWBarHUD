@@ -1,7 +1,7 @@
 # DWBarHUD
 
 
-![default-default](https://github.com/Dywane/DWBarHUD/raw/master/GIF/default-default.gif)
+![default-default](https://github.com/Dywane/DWBarHUD/raw/master/GIF/all.gif)
 
 DWBarHUD is a **Swfit** based top bar HUD for iOS 9 and above, support iPhoneX.
 
@@ -10,12 +10,6 @@ DWBarHUD is a **Swfit** based top bar HUD for iOS 9 and above, support iPhoneX.
 * Show on top of view controlles.
 * Four styles suit all needs.
 * Present/Dismiss animation.
-
-![failed-fade](https://github.com/Dywane/DWBarHUD/raw/master/GIF/fail-fade.gif)
-
-![success-default](https://github.com/Dywane/DWBarHUD/raw/master/GIF/success-default.gif)
-
-![warning-spring](https://github.com/Dywane/DWBarHUD/raw/master/GIF/warning-spring.gif)
 
 ## Installation
 
