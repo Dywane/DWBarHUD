@@ -17,6 +17,19 @@ DWBarHUD is a **Swfit** based top bar HUD for iOS 9 and above, support iPhoneX.
 
 ![warning-spring](https://github.com/Dywane/DWBarHUD/raw/master/GIF/warning-spring.gif)
 
+## Installation
+
+You want to add `pod 'DWBarHUD', '~> 1.0'` similar to the following to your Podfile:
+
+```ruby
+target 'MyApp' do
+  pod 'DWBarHUD', '~> 1.0'
+end
+```
+Then run a `pod install` inside your terminal, or from CocoaPods.app.
+
+Alternatively to give it a test run, run the command:`pod try DWBarHUD`
+
 ## Usage
 In any UIViewController, you need to import the module first
 
